@@ -34,12 +34,85 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
-## License
 
-This work is published under [MIT][mit] License.
+## Installation
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[use-template]: https://github.com/cotes2020/chirpy-starter/generate
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+If on windows use wsl.
+
+```
+sudo apt update
+sudo apt install ruby-full build-essential zlib1g-dev git
+```
+
+```
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+```
+gem install jekyll bundler
+```
+If you get an error here, instead run `gem install jekyll --version="~> 4.2.0"`
+
+## Chirpy starter
+Video tutorial: https://www.youtube.com/watch?v=F8iOU1ci19Q
+
+
+Clone your repo and install dependencies.
+
+```
+git clone git@<YOUR-USER-NAME>/<YOUR-REPO-NAME>.git
+cd repo-name
+bundle 
+```
+
+
+## Jekyll commands
+Serve your site
+
+```
+bundle exec jekyll s
+```
+
+To use live reload start with `bundle exec jekyll s --force-polling`
+
+Build your site in production mode, output will be in `_site`
+
+```
+JEKYLL_ENV=production bundle exec jekyll b
+```
+
+## Building with docker
+
+Create a Dockerfile with the following
+
+```Dockerfile
+FROM nginx:stable-alpine
+COPY _site /usr/share/nginx/html
+```
+Build the site in production
+
+```
+JEKYLL_ENV=production bundle exec jekyll b
+```
+Then build your image with docker build .
+
+
+## Creating a post
+
+Create a file in `_posts` with the format
+
+YEAR-MONTH-DAY-title.md
+
+## Local linking of files 
+
+```Markdown
+... which is shown in the screenshot below:
+![A screenshot](/assets/screenshot.webp)
+```
+
+```Markdown
+... you can [download the PDF](/assets/diagram.pdf) here.
+```
