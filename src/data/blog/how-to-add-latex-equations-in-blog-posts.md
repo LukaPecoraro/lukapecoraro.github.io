@@ -107,8 +107,8 @@ And _voilà_, this setup allows you to write LaTeX equations in your Markdown fi
 
 Inline equations are written between single dollar signs `$...$`. Here are some examples:
 
-1. The famous mass-energy equivalence formula: `$E = mc^2$`
-2. The quadratic formula: `$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$`
+1. The famous mass-energy equivalence formula: `$E = mc^2$` $E = mc^2$
+2. The quadratic formula: `$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$` $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 3. Euler's identity: `$e^{i\pi} + 1 = 0$`
 
 ---
@@ -141,6 +141,15 @@ $$
 \end{aligned}
 $$
 ```
+
+$$
+\begin{aligned}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+\nabla \times \mathbf{B} &= \mu_0\left(\mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)
+\end{aligned}
+$$
 
 ---
 

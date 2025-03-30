@@ -7,17 +7,25 @@
 html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #006cac;
+  --accent: #1158d1;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
 
-html[data-theme="dark"] {
+/* html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #ff6b01;
   --muted: #343f60bf;
   --border: #ab4b08;
+} */
+
+html[data-theme="dark"] {
+  --background: #2c3e50;
+  --foreground: #ecf0f1;
+  --accent: #1abc9c;
+  --muted: #34495e;
+  --border: #16a085;
 }
 
 @theme inline {

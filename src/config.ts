@@ -3,7 +3,7 @@ export const SITE = {
   author: "Luka Salvatore Pecoraro",
   profile: "https://lukapecoraro.com/",
   desc: "A personal blog",
-  title: "AstroPaper",
+  title: "Luka Salvatore Pecoraro",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
